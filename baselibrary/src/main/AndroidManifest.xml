@@ -1,0 +1,21 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.egova.baselibrary">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application>
+        <activity android:name=".activity.TakePhotoHelper" />
+        <activity
+            android:name=".base.ContainerActivity"
+            android:configChanges="keyboard|mcc|mnc|locale|touchscreen|keyboardHidden|navigation|orientation|screenSize|uiMode|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PhotoPreviewActivity"
+            android:configChanges="keyboard|mcc|mnc|locale|touchscreen|keyboardHidden|navigation|orientation|screenSize|uiMode|screenLayout"
+            android:screenOrientation="portrait" />
+    </application>
+</manifest>
+
+

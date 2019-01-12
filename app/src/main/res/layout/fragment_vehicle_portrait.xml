@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_color"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/title_back_bar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_top_bottom">
+
+            <TextView
+                android:id="@+id/todayBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_right"
+                android:layout_marginTop="@dimen/margin_top_bottom"
+                android:background="@drawable/btn_tag_selector"
+                android:onClick="@{onClick}"
+                android:paddingLeft="@dimen/normal_margin"
+                android:paddingTop="@dimen/small_margin"
+                android:paddingRight="@dimen/normal_margin"
+                android:paddingBottom="@dimen/small_margin"
+                android:text="@string/today_text"
+                android:textColor="@color/white_black_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView
+                android:id="@+id/sevenDayBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_right"
+                android:layout_marginTop="@dimen/margin_top_bottom"
+                android:background="@drawable/btn_tag_selector"
+                android:onClick="@{onClick}"
+                android:paddingLeft="@dimen/normal_margin"
+                android:paddingTop="@dimen/small_margin"
+                android:paddingRight="@dimen/normal_margin"
+                android:paddingBottom="@dimen/small_margin"
+                android:text="@string/seven_day_text"
+                android:textColor="@color/white_black_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_bottom"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/margin_left_right">
+
+                <TextView
+                    android:id="@+id/startDateEdit"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg_color"
+                    android:onClick="@{onClick}"
+                    android:paddingLeft="@dimen/margin_left_right"
+                    android:paddingTop="@dimen/small_margin"
+                    android:paddingRight="@dimen/margin_left_right"
+                    android:paddingBottom="@dimen/small_margin"
+                    android:text="2018-12-07"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/normal_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/small_margin"
+                    android:paddingTop="@dimen/small_margin"
+                    android:paddingRight="@dimen/small_margin"
+                    android:paddingBottom="@dimen/small_margin"
+                    android:text="到"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/normal_text_size" />
+
+                <TextView
+                    android:id="@+id/endDateEdit"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg_color"
+                    android:onClick="@{onClick}"
+                    android:paddingLeft="@dimen/margin_left_right"
+                    android:paddingTop="@dimen/small_margin"
+                    android:paddingRight="@dimen/margin_left_right"
+                    android:paddingBottom="@dimen/small_margin"
+                    android:text="2018-12-07"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/normal_text_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider_height"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/normal_margin"
+                            android:text="@string/active_region"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/big_text_size" />
+
+                        <TextView
+                            android:id="@+id/mostRegion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/normal_margin"
+                            android:textColor="@color/blue_text"
+                            android:textSize="@dimen/normal_text_size" />
+                    </LinearLayout>
+
+                    <com.classic.common.MultipleStatusView
+                        android:id="@+id/regionChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pic_chart_height"
+                        android:layout_marginBottom="@dimen/big_margin"
+                        app:errorView="@layout/status_error"
+                        app:loadingView="@layout/status_loading">
+
+                    </com.classic.common.MultipleStatusView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider_height"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/normal_margin"
+                            android:text="@string/active_time"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/big_text_size" />
+
+                        <TextView
+                            android:id="@+id/mostTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/normal_margin"
+                            android:textColor="@color/blue_text"
+                            android:textSize="@dimen/normal_text_size" />
+                    </LinearLayout>
+
+                    <com.classic.common.MultipleStatusView
+                        android:id="@+id/timeChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pic_chart_height"
+                        android:layout_marginBottom="@dimen/big_margin"
+                        app:errorView="@layout/status_error"
+                        app:loadingView="@layout/status_loading">
+
+                    </com.classic.common.MultipleStatusView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider_height"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/normal_margin"
+                            android:text="@string/active_tollgate"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/big_text_size" />
+
+                        <TextView
+                            android:id="@+id/mostTollgate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/normal_margin"
+                            android:textColor="@color/blue_text"
+                            android:textSize="@dimen/normal_text_size" />
+                    </LinearLayout>
+
+                    <com.classic.common.MultipleStatusView
+                        android:id="@+id/tollgateChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/bar_chart_height"
+                        android:layout_marginBottom="@dimen/big_margin"
+                        app:errorView="@layout/status_error"
+                        app:loadingView="@layout/status_loading">
+
+                    </com.classic.common.MultipleStatusView>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

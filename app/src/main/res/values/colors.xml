@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4892FA</color>
+    <color name="colorPrimaryDark">#4079EF</color>
+    <color name="colorAccent">#4892FA</color>
+
+    <color name="main_bg_color">#edf1f5</color>
+
+    <color name="divider_color">#888888</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorDarkWhite">#FBFBFB</color>
+    <!--黑色文字-->
+    <color name="colorGray">#333333</color>
+    <!--浅灰色文字-->
+    <color name="color_light_gray">#aa000000</color>
+
+    <color name="color_red">#F23A3A</color>
+    <color name="color_dark_red">#FF3B5F</color>
+    <color name="color_blue">#4079EF</color>
+    <color name="color_green">#30EA54</color>
+    <color name="color_yellow">#FFC51A</color>
+    <color name="color_black">#000000</color>
+</resources>

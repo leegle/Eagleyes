@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><!--黑牌：黑底白字，红“使”、“领”字，白框线-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:dither="true"
+            android:shape="rectangle">
+            <corners android:radius="4dp" />
+            <solid android:color="@color/color_black" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="@dimen/small_margin"
+        android:left="@dimen/small_margin"
+        android:right="@dimen/small_margin"
+        android:top="@dimen/small_margin">
+        <shape
+            android:dither="true"
+            android:shape="rectangle">
+            <corners android:radius="2dp" />
+            <stroke
+                android:width="4dp"
+                android:color="@color/colorWhite" />
+        </shape>
+    </item>
+
+</layer-list>

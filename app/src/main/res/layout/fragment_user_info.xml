@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_color"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/title_back_bar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/userPhoto"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_margin="@dimen/normal_margin"
+                android:src="@mipmap/default_avatar" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/userPhoto"
+                android:layout_marginTop="@dimen/margin_left_right"
+                android:layout_toRightOf="@id/userPhoto"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/title_text_size"
+                android:textStyle="bold" />
+
+            <com.egova.baselibrary.widget.MarqueeTextView
+                android:id="@+id/department"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userName"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_toRightOf="@id/userPhoto"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textColor="@color/color_light_gray" />
+
+            <TextView
+                android:id="@+id/idCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/department"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_toRightOf="@id/userPhoto"
+                android:singleLine="true"
+                android:textColor="@color/color_light_gray"
+                android:textSize="@dimen/normal_text_size" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:paddingLeft="@dimen/margin_left_right"
+            android:paddingTop="@dimen/margin_left_right"
+            android:text="@string/mine_static"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/title_text_size" />
+
+        <com.classic.common.MultipleStatusView
+            android:id="@+id/photoStatistics"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/colorWhite"
+            app:errorView="@layout/status_error"
+            app:loadingView="@layout/status_loading">
+
+            <include
+                android:id="@+id/photoStatisticsItem"
+                layout="@layout/mine_item_static" />
+        </com.classic.common.MultipleStatusView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_left_right">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_bg_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:padding="@dimen/margin_left_right"
+                    android:text="@string/mine_work_record"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/title_text_size" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider_height"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/workRecordRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@color/colorWhite" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:background="@color/colorWhite"
+                    android:padding="@dimen/margin_left_right"
+                    android:text="@string/mine_rank"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/title_text_size"
+                    android:visibility="gone" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rankRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="@dimen/item_divider_height"
+                    android:background="@color/colorWhite"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/clearCache"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_marginBottom="@dimen/big_margin"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_left_right">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_item_size"
+                        android:layout_height="@dimen/icon_item_size"
+                        android:src="@mipmap/icon_setting" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_left_right"
+                        android:gravity="center_vertical"
+                        android:text="@string/mine_clear_cache"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/title_text_size" />
+                    <TextView
+                        android:id="@+id/cacheSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/margin_left_right"
+                        android:layout_marginRight="@dimen/margin_left_right"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/title_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/aboutUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider_height"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_left_right">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_item_size"
+                        android:layout_height="@dimen/icon_item_size"
+                        android:src="@mipmap/icon_about" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_left_right"
+                        android:gravity="center_vertical"
+                        android:text="@string/mine_about"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/title_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="year" type="id"/>
+    <item name="month" type="id"/>
+    <item name="day" type="id"/>
+    <item name="hour" type="id"/>
+    <item name="min" type="id"/>
+
+    <item name="province" type="id"/>
+    <item name="city" type="id"/>
+    <item name="district" type="id"/>
+</resources>

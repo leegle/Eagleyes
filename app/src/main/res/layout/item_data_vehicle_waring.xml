@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/margin_top_bottom"
+        android:paddingBottom="@dimen/margin_top_bottom">
+
+        <com.egova.eagleyes.widget.TwoTextVerticalView
+            android:id="@+id/integral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:title="@string/data_vehicle_waring_yes"
+            app:value="--" />
+
+        <com.egova.eagleyes.widget.TwoTextVerticalView
+            android:id="@+id/noIntegral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:title="@string/data_vehicle_waring_no"
+            app:value="--" />
+    </LinearLayout>
+</layout>

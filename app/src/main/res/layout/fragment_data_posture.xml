@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_color"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/title_back_bar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/normal_margin">
+
+
+                <com.classic.common.MultipleStatusView
+                    android:id="@+id/vehiclePass"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    app:errorView="@layout/status_error"
+                    app:loadingView="@layout/status_loading">
+
+                    <include
+                        android:id="@+id/passFlow"
+                        layout="@layout/item_data_vehicle_pass" />
+                </com.classic.common.MultipleStatusView>
+
+                <TextView
+                    style="@style/data_posture_title"
+                    android:text="@string/data_vehicle_waring" />
+
+                <com.classic.common.MultipleStatusView
+                    android:id="@+id/vehicleWaring"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    app:errorView="@layout/status_error"
+                    app:loadingView="@layout/status_loading">
+
+                    <include
+                        android:id="@+id/pointAlarm"
+                        layout="@layout/item_data_vehicle_waring" />
+                </com.classic.common.MultipleStatusView>
+
+                <TextView
+                    style="@style/data_posture_title"
+                    android:text="@string/data_vehicle_sum" />
+
+                <com.classic.common.MultipleStatusView
+                    android:id="@+id/vehicleSum"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    app:errorView="@layout/status_error"
+                    app:loadingView="@layout/status_loading">
+
+                    <include
+                        android:id="@+id/vehicleNumBind"
+                        layout="@layout/item_data_vehicle_sum" />
+                </com.classic.common.MultipleStatusView>
+
+                <TextView
+                    style="@style/data_posture_title"
+                    android:text="@string/data_vehicle_peaktime" />
+
+                <com.classic.common.MultipleStatusView
+                    android:id="@+id/vehiclePeak"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    app:errorView="@layout/status_error"
+                    app:loadingView="@layout/status_loading">
+
+                    <include
+                        android:id="@+id/vehiclePeakBind"
+                        layout="@layout/item_data_vehicle_peak" />
+                </com.classic.common.MultipleStatusView>
+
+                <TextView
+                    style="@style/data_posture_title"
+                    android:text="@string/data_vehicle_outside" />
+
+                <com.classic.common.MultipleStatusView
+                    android:id="@+id/vehicleOutside"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    app:errorView="@layout/status_error"
+                    app:loadingView="@layout/status_loading">
+
+                    <include
+                        android:id="@+id/localVehicleFlow"
+                        layout="@layout/item_data_vehicle_outside" />
+                </com.classic.common.MultipleStatusView>
+
+                <TextView
+                    style="@style/data_posture_title"
+                    android:text="@string/data_device_status" />
+
+                <com.classic.common.MultipleStatusView
+                    android:id="@+id/deviceStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    app:errorView="@layout/status_error"
+                    app:loadingView="@layout/status_loading">
+
+                    <include
+                        android:id="@+id/deviceStatusBind"
+                        layout="@layout/item_data_device_status" />
+                </com.classic.common.MultipleStatusView>
+
+                <TextView
+                    style="@style/data_posture_title"
+                    android:text="@string/data_result" />
+
+                <com.classic.common.MultipleStatusView
+                    android:id="@+id/dataResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    app:errorView="@layout/status_error"
+                    app:loadingView="@layout/status_loading">
+
+                    <include
+                        android:id="@+id/dataResultBind"
+                        layout="@layout/item_data_result" />
+                </com.classic.common.MultipleStatusView>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>

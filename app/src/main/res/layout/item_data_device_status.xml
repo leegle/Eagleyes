@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/margin_top_bottom"
+        android:paddingBottom="@dimen/margin_top_bottom">
+
+        <com.egova.eagleyes.widget.TwoTextVerticalView
+            android:id="@+id/totalNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:title="@string/data_device_sum"
+            app:value="--" />
+
+        <com.egova.eagleyes.widget.TwoTextVerticalView
+            android:id="@+id/onlineNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:title="@string/data_device_online"
+            app:value="--" />
+
+        <com.egova.eagleyes.widget.TwoTextVerticalView
+            android:id="@+id/offlineNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:title="@string/data_device_offline"
+            app:value="--"
+            app:valueTextColor="@color/color_red" />
+
+    </LinearLayout>
+</layout>

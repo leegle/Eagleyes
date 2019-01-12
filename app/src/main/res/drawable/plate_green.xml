@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--新能源汽车专用号牌：绿底黑字黑框线，新能源汽车号牌为渐变绿色，
+大型新能源汽车号牌为黄绿双拼色-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape
+            android:dither="true"
+            android:shape="rectangle">
+            <corners android:radius="4dp" />
+            <solid android:color="@color/color_green" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="@dimen/small_margin"
+        android:left="@dimen/small_margin"
+        android:right="@dimen/small_margin"
+        android:top="@dimen/small_margin">
+        <shape
+            android:dither="true"
+            android:shape="rectangle">
+            <corners android:radius="2dp" />
+            <stroke
+                android:width="4dp"
+                android:color="@color/colorGray" />
+        </shape>
+    </item>
+
+</layer-list>

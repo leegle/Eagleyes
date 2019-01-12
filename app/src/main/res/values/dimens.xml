@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_margin">5dp</dimen>
+    <dimen name="normal_margin">10dp</dimen>
+    <dimen name="big_margin">20dp</dimen>
+    <dimen name="largin_margin">25dp</dimen>
+
+    <dimen name="icon_search_size">25dp</dimen>
+    <dimen name="icon_normal_size">20dp</dimen>
+    <dimen name="icon_big_size">30dp</dimen>
+    <dimen name="icon_item_size">15dp</dimen>
+
+    <dimen name="icon_arrow_width">10dp</dimen>
+    <dimen name="icon_arrow_height">18dp</dimen>
+
+    <dimen name="item_divider_height">1dp</dimen>
+
+    <dimen name="icon_back_width">10dp</dimen>
+    <dimen name="icon_back_height">17dp</dimen>
+
+    <dimen name="car_image_height">160dp</dimen>
+
+    <dimen name="pic_chart_height">200dp</dimen>
+    <dimen name="bar_chart_height">200dp</dimen>
+
+    <dimen name="tab_bar_height">45dp</dimen>
+</resources>

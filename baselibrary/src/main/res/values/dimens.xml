@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 小号字体-->
+    <dimen name="small_text_size">12sp</dimen>
+    <!--正常字体-->
+    <dimen name="normal_text_size">14sp</dimen>
+    <!--大号字体-->
+    <dimen name="big_text_size">16sp</dimen>
+    <!--标题字体-->
+    <dimen name="title_text_size">18sp</dimen>
+    <dimen name="large_title_text_size">20sp</dimen>
+
+    <!--提示框边距-->
+    <dimen name="dialog_prompt_padding">40dp</dimen>
+     <!--确认，取消弹窗边距-->
+    <dimen name="dialog_confirm_padding">20dp</dimen>
+
+    <dimen name="button_lin_height">45dp</dimen>
+    <dimen name="button_height">40dp</dimen>
+
+    <dimen name="margin_top_bottom">8dp</dimen>
+    <dimen name="margin_left_right">10dp</dimen>
+
+    <dimen name="icon_back_height">30dp</dimen>
+    
+
+</resources>

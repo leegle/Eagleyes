@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data></data>
+
+    <RelativeLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:id="@+id/leftBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_left_right"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/icon_back_width"
+                android:layout_height="@dimen/icon_back_height"
+                android:layout_marginTop="@dimen/margin_left_right"
+                android:layout_marginBottom="@dimen/margin_left_right"
+                android:background="@mipmap/icon_back"
+                android:scaleType="fitCenter"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:text="返回"
+                android:textColor="@color/white_black_text_color"
+                android:textSize="@dimen/title_text_size" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="标题"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/large_title_text_size" />
+
+
+    </RelativeLayout>
+
+
+</layout>

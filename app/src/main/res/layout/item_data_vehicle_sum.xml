@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/margin_top_bottom"
+        android:paddingBottom="@dimen/margin_top_bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_top_bottom"
+            android:orientation="horizontal">
+
+            <com.egova.eagleyes.widget.TwoTextVerticalView
+                android:id="@+id/totalVehicleNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:title="@string/data_vehicle_sum_all"
+                app:value="--" />
+
+            <com.egova.eagleyes.widget.TwoTextVerticalView
+                android:id="@+id/bigVehicleNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:title="@string/data_vehicle_sum_big"
+                app:value="--" />
+
+            <com.egova.eagleyes.widget.TwoTextVerticalView
+                android:id="@+id/smallVehicleNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:title="@string/data_vehicle_sum_small"
+                app:value="--" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_divider_height"
+            android:background="@color/main_bg_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_bottom"
+            android:orientation="horizontal">
+
+            <com.egova.eagleyes.widget.TwoTextHorizontalView
+                android:id="@+id/passFlow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:title="@string/data_vehicle_avg"
+                app:value="--" />
+
+            <com.egova.eagleyes.widget.TwoTextHorizontalView
+                android:id="@+id/captureNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:title="@string/data_vehicle_photo_avg"
+                app:value="--" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

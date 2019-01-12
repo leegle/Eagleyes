@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_bg_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/small_margin"
+            android:background="@color/divider_color"
+            android:gravity="center"
+            android:padding="@dimen/small_margin"
+            android:text="第1条"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/small_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_left_right"
+                android:text="@string/disposition_date"
+                android:textColor="@color/blue_text"
+                android:textSize="@dimen/big_text_size" />
+
+            <TextView
+                android:id="@+id/dispositionDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_left_right"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/big_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_left_right"
+                android:text="@string/disposition_time"
+                android:textColor="@color/blue_text"
+                android:textSize="@dimen/big_text_size" />
+
+            <TextView
+                android:id="@+id/dispositionTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_left_right"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/big_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_left_right"
+                android:text="@string/disposition_reason"
+                android:textColor="@color/blue_text"
+                android:textSize="@dimen/big_text_size" />
+
+            <TextView
+                android:id="@+id/dispositionReason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_left_right"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/big_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_left_right"
+                android:text="@string/disposition_status"
+                android:textColor="@color/blue_text"
+                android:textSize="@dimen/big_text_size" />
+
+            <TextView
+                android:id="@+id/dispositionStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_left_right"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/big_text_size" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="right"
+            android:padding="@dimen/margin_left_right"
+            android:text="详情 >>"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/big_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_divider_height"
+            android:background="@color/main_bg_color" />
+    </LinearLayout>
+</layout>

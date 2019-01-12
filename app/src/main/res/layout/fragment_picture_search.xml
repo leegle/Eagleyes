@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_color"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/title_back_bar" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_left_right"
+            android:background="@color/colorWhite"
+            android:padding="@dimen/normal_margin"
+            app:cardCornerRadius="@dimen/small_margin">
+
+            <ImageView
+                android:id="@+id/carImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/car_image_height"
+                android:onClick="@{onClick}"
+                android:scaleType="fitXY" />
+        </androidx.cardview.widget.CardView>
+
+        <com.egova.eagleyes.widget.ItemTextArrowView
+            android:id="@+id/startTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_right"
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:onClick="@{onClick}"
+            android:paddingTop="@dimen/small_margin"
+            android:paddingBottom="@dimen/small_margin"
+            app:itemTitle="@string/start_time" />
+
+        <com.egova.eagleyes.widget.ItemTextArrowView
+            android:id="@+id/endTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_right"
+            android:layout_marginTop="@dimen/item_divider_height"
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:onClick="@{onClick}"
+            android:paddingTop="@dimen/small_margin"
+            android:paddingBottom="@dimen/small_margin"
+            app:itemTitle="@string/end_time" />
+
+        <com.egova.eagleyes.widget.ItemTextArrowView
+            android:id="@+id/area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_right"
+            android:layout_marginTop="@dimen/item_divider_height"
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:onClick="@{onClick}"
+            android:paddingTop="@dimen/small_margin"
+            android:paddingBottom="@dimen/small_margin"
+            app:itemTitle="@string/search_area" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/startSearch"
+            style="@style/Button.Default"
+            android:layout_marginLeft="@dimen/margin_left_right"
+            android:layout_marginTop="@dimen/margin_top_bottom"
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:onClick="@{onClick}"
+            android:text="@string/start_search" />
+    </LinearLayout>
+</layout>

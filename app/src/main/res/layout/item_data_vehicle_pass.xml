@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_bg_color"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.egova.eagleyes.widget.TwoTextHorizontalView
+            android:id="@+id/totalPassNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:paddingTop="@dimen/margin_top_bottom"
+            android:paddingBottom="@dimen/margin_top_bottom"
+            app:title="@string/data_vehicle_pass_count"
+            app:value="--" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_divider_height"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/margin_top_bottom"
+            android:paddingBottom="@dimen/margin_top_bottom">
+
+            <com.egova.eagleyes.widget.TwoTextVerticalView
+                android:id="@+id/todayNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:title="@string/data_vehicle_pass_today"
+                app:value="--" />
+
+            <com.egova.eagleyes.widget.TwoTextVerticalView
+                android:id="@+id/firstPassNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:title="@string/data_vehicle_pass_first"
+                app:value="--"
+                app:valueTextColor="@color/color_red" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

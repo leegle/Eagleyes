@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data></data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGray">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray" />
+
+        <RelativeLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            >
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="@dimen/icon_back_height"
+                android:layout_height="@dimen/icon_back_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/bg_back_arrow_white_selector"
+                android:padding="20dp"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/tv_line_apu"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/backBtn"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_line_apu"
+                android:paddingLeft="10dp"
+                android:text="11"
+                android:textColor="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/deleteBtn"
+                android:layout_width="@dimen/icon_back_height"
+                android:layout_height="@dimen/icon_back_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_delete_selector"
+                android:scaleType="centerInside" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

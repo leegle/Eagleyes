@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_color"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/title_back_bar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_left_right"
+            android:background="@drawable/bg_search"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_query"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/small_margin"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:ellipsize="end"
+                android:hint="@string/hint_search_text"
+                android:singleLine="true"
+                android:textSize="@dimen/big_text_size" />
+
+            <ImageView
+                android:id="@+id/icon_clear"
+                android:layout_width="@dimen/icon_big_size"
+                android:layout_height="@dimen/icon_big_size"
+                android:layout_marginRight="@dimen/margin_left_right"
+                android:onClick="@{onClick}"
+                android:padding="@dimen/small_margin"
+                android:src="@mipmap/icon_clear" />
+
+            <ImageView
+                android:id="@+id/icon_tip"
+                android:layout_width="@dimen/icon_big_size"
+                android:layout_height="@dimen/icon_big_size"
+                android:onClick="@{onClick}"
+                android:padding="@dimen/small_margin"
+                android:src="@mipmap/icon_tips" />
+        </LinearLayout>
+
+        <com.egova.eagleyes.widget.ItemTextArrowView
+            android:id="@+id/startTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_right"
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:onClick="@{onClick}"
+            android:paddingTop="@dimen/small_margin"
+            android:paddingBottom="@dimen/small_margin"
+            app:itemTitle="@string/start_time" />
+
+        <com.egova.eagleyes.widget.ItemTextArrowView
+            android:id="@+id/endTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_right"
+            android:layout_marginTop="@dimen/item_divider_height"
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:onClick="@{onClick}"
+            android:paddingTop="@dimen/small_margin"
+            android:paddingBottom="@dimen/small_margin"
+            app:itemTitle="@string/end_time" />
+
+        <com.egova.eagleyes.widget.ItemTextArrowView
+            android:id="@+id/area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_right"
+            android:layout_marginTop="@dimen/item_divider_height"
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:onClick="@{onClick}"
+            android:paddingTop="@dimen/small_margin"
+            android:paddingBottom="@dimen/small_margin"
+            app:itemTitle="@string/search_area" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_margin="@dimen/margin_left_right"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/conditionSearch"
+                style="@style/Button.Default"
+                android:layout_weight="1"
+                android:onClick="@{onClick}"
+                android:text="@string/condition_search"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/startSearch"
+                style="@style/Button.Default"
+                android:layout_marginLeft="@dimen/margin_left_right"
+                android:layout_weight="1"
+                android:onClick="@{onClick}"
+                android:text="@string/start_search" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

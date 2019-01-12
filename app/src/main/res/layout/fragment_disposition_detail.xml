@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.egova.eagleyes.util.VehicleUtil" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="dispositionInfo"
+            type="com.egova.eagleyes.model.respose.DispositionInfo" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_color"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/title_back_bar" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancelBtn"
+            style="@style/Button.Default"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/margin_left_right"
+            android:onClick="@{onClick}"
+            android:text="@string/disposition_cancel"
+            android:visibility="@{dispositionInfo.disabled?View.GONE: View.VISIBLE}" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/cancelBtn"
+            android:layout_below="@id/titleBar">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.egova.eagleyes.widget.ItemTextArrowView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider_height"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/small_margin"
+                    app:itemColor="@color/blue_text"
+                    app:itemContent="@{dispositionInfo.creator}"
+                    app:itemTitle="@string/disposition_person"
+                    app:showArrow="false" />
+
+                <com.egova.eagleyes.widget.ItemTextArrowView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider_height"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/small_margin"
+                    app:itemColor="@color/blue_text"
+                    app:itemContent="@{dispositionInfo.typeName}"
+                    app:itemTitle="@string/disposition_type"
+                    app:showArrow="false" />
+
+                <com.egova.eagleyes.widget.ItemTextArrowView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider_height"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/small_margin"
+                    app:itemColor="@color/blue_text"
+                    app:itemContent="@{dispositionInfo.plate}"
+                    app:itemTitle="@string/disposition_plate"
+                    app:showArrow="false" />
+
+                <com.egova.eagleyes.widget.ItemTextArrowView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider_height"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/small_margin"
+                    app:itemColor="@color/blue_text"
+                    app:itemContent="@{VehicleUtil.contactDate(dispositionInfo.startDate,dispositionInfo.endDate)}"
+                    app:itemTitle="@string/disposition_date"
+                    app:showArrow="false" />
+
+                <com.egova.eagleyes.widget.ItemTextArrowView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider_height"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/small_margin"
+                    app:itemColor="@color/blue_text"
+                    app:itemContent="@{VehicleUtil.contactTime(dispositionInfo.startAlarmPeriod,dispositionInfo.endAlarmPeriod)}"
+                    app:itemTitle="@string/disposition_time"
+                    app:showArrow="false" />
+
+                <com.egova.eagleyes.widget.ItemTextArrowView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider_height"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/small_margin"
+                    app:itemColor="@color/blue_text"
+                    app:itemContent="@{dispositionInfo.cause}"
+                    app:itemTitle="@string/disposition_reason"
+                    app:showArrow="false" />
+
+                <com.egova.eagleyes.widget.ItemTextArrowView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider_height"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/small_margin"
+                    app:itemColor="@color/blue_text"
+                    app:itemContent="@{dispositionInfo.createTime}"
+                    app:itemTitle="@string/police_alert_time"
+                    app:showArrow="false" />
+
+                <com.egova.eagleyes.widget.ItemTextArrowView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/small_margin"
+                    app:itemColor="@color/blue_text"
+                    app:itemContent="@{VehicleUtil.dealDispositionStatus(dispositionInfo.disabled)}"
+                    app:itemTitle="@string/disposition_status"
+                    app:showArrow="false" />
+
+                <com.egova.eagleyes.widget.ItemTextArrowView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/small_margin"
+                    android:visibility="@{dispositionInfo.disabled?View.VISIBLE: View.GONE}"
+                    app:itemColor="@color/blue_text"
+                    app:itemContent="@{dispositionInfo.modifier}"
+                    app:itemTitle="@string/disposition_cancel_person"
+                    app:showArrow="false" />
+
+                <com.egova.eagleyes.widget.ItemTextArrowView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider_height"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/small_margin"
+                    android:visibility="@{dispositionInfo.disabled?View.VISIBLE: View.GONE}"
+                    app:itemColor="@color/blue_text"
+                    app:itemContent="@{dispositionInfo.revokeCause}"
+                    app:itemTitle="@string/disposition_cancel_reason"
+                    app:showArrow="false" />
+
+                <com.egova.eagleyes.widget.ItemTextArrowView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider_height"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/small_margin"
+                    android:visibility="@{dispositionInfo.disabled?View.VISIBLE: View.GONE}"
+                    app:itemColor="@color/blue_text"
+                    app:itemContent="@{dispositionInfo.modifyTime}"
+                    app:itemTitle="@string/disposition_cancel_time"
+                    app:showArrow="false" />
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

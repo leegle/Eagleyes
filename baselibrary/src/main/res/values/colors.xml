@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4fadf6</color>
+    <color name="colorGray">#333333</color>
+    <!--提示框背景色-->
+    <color name="dialog_bg_color">#aa000000</color>
+    <!--提示框文字颜色-->
+    <color name="dialog_text_color">#ffffffff</color>
+    <!--确认取消弹窗 背景色-->
+    <color name="dialog_confirm_bg_color">#ffffffff</color>
+    <color name="default_bg_color">#EAEAEA</color>
+    <color name="blue_text">#4079EF</color>
+
+    <!--拍照选择相册的主题色-->
+    <color name="multiple_image_select_primaryDark">#4892FA</color>
+    <color name="multiple_image_select_primary">#4079EF</color>
+</resources>

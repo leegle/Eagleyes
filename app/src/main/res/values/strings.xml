@@ -1,0 +1,148 @@
+<resources>
+    <string name="app_name">云鹰</string>
+
+    <string name="exit_tip">退出应用</string>
+    <string name="exit_app">再按一次退出软件</string>
+
+    <string name="permission_failed">权限不足</string>
+    <string name="permission_required">权限不足，请授权相应的权限!</string>
+    <string name="permission_again_take">重新授权</string>
+
+
+    <string name="user_info">用户信息</string>
+    <string name="user_login_wait">用户登录验证中，请稍后</string>
+    <string name="user_recognition_fail">用户验证失败</string>
+    <string name="login_try">重新登录</string>
+    <string name="load_dict">初始化配置信息中...</string>
+    <string name="load_dict_fail">初始化配置信息失败</string>
+    <string name="load_dict_success">初始化配置完成</string>
+    <string name="retry">重试</string>
+    <string name="close_activity">关闭</string>
+    <string name="load_error">数据加载失败</string>
+
+    <string name="mine_static">我的统计</string>
+    <string name="mine_total">总数</string>
+    <string name="mine_week">本周</string>
+    <string name="mine_today">今日</string>
+    <string name="mine_work_record">工作记录</string>
+    <string name="mine_rank">排行榜</string>
+    <string name="mine_clear_cache">清除缓存</string>
+    <string name="mine_about">关于我们</string>
+
+
+    <string name="status_error">加载失败，点击重试！</string>
+    <string name="status_network_error">网络连接异常，点击重试！</string>
+    <string name="status_empty">暂无相关内容，点击重试！</string>
+
+    <string name="text_search">全文检索</string>
+    <string name="camera_search">拍照检索</string>
+    <string name="photo_take_fail">照片获取失败，请重试</string>
+
+    <string name="wait_file_upload">正在上传文件，请稍等...</string>
+    <string name="wait_identify">文件已上传，正在识别...</string>
+    <string name="error_upload">文件上传失败，请重试!</string>
+    <string name="cancel_text">已取消</string>
+
+    <string name="tip_key_word">您可以输入车牌号、车身颜色、车牌大品牌、子品牌、年款、车头、车尾、卡口所在区县名称、车辆种类（例如SUV）、卡口名称、卡口类型、设备厂家、危化品车、豪车、国产车等关键字，关键字用空格隔开，赶紧试试吧！</string>
+    <string name="search_loading">正在搜索...</string>
+    <string name="hint_search_text">地区、车牌号、品牌、种类、颜色、卡扣、区域、时间</string>
+    <string name="search_area">查询区域</string>
+    <string name="start_time">起始时段</string>
+    <string name="end_time">结束时段</string>
+    <string name="start_search">开始搜索</string>
+    <string name="condition_search">精确搜索</string>
+
+    <string name="detail_info">详细信息</string>
+    <string name="vehicle_info">过车信息(%s条)</string>
+    <string name="take_photo_again">重拍</string>
+    <string name="confirm_upload">确认上传</string>
+
+    <string name="plate_no">车牌号码</string>
+    <string name="brand">车牌品牌</string>
+    <string name="sub_brand">车牌子品牌</string>
+    <string name="vehicle_year">车辆年款</string>
+    <string name="vehicle_color">车辆颜色</string>
+    <string name="vehicle_type">车辆类型</string>
+    <string name="take_time">拍摄时间</string>
+    <string name="take_position">拍摄卡口</string>
+    <string name="vehicle_picture">车辆图片</string>
+    <string name="search_by_picture">以图搜图</string>
+    <string name="vehicle_portrait">车辆画像</string>
+
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+
+    <string name="today_text">今天</string>
+    <string name="seven_day_text">近七天</string>
+    <string name="active_region">活跃区县</string>
+    <string name="active_time">活跃时间</string>
+    <string name="active_tollgate">活跃卡口</string>
+
+    <string name="data_posture">数据态势</string>
+    <string name="data_vehicle_pass_count">过车总量：</string>
+    <string name="data_vehicle_pass_today">今日过车</string>
+    <string name="data_vehicle_pass_first">初次入城</string>
+
+    <string name="data_vehicle_waring">积分预警</string>
+    <string name="data_vehicle_waring_yes">积分数据量</string>
+    <string name="data_vehicle_waring_no">未积分数据量</string>
+
+    <string name="data_vehicle_sum">机动车保有量</string>
+    <string name="data_vehicle_sum_all">总量</string>
+    <string name="data_vehicle_sum_big">大型</string>
+    <string name="data_vehicle_sum_small">小型</string>
+    <string name="data_vehicle_avg">日均过车：</string>
+    <string name="data_vehicle_photo_avg">平均抓拍：</string>
+
+    <string name="data_vehicle_peaktime">早晚高峰</string>
+    <string name="data_vehicle_outside">外地车</string>
+
+    <string name="data_device_status">设备状态</string>
+    <string name="data_device_sum">总数</string>
+    <string name="data_device_online">在线</string>
+    <string name="data_device_offline">离线</string>
+
+    <string name="data_result">判研结果</string>
+    <string name="data_fake_plate">假牌</string>
+    <string name="data_other_plate">套牌</string>
+
+    <string name="police_control">车辆布控</string>
+    <string name="police_alert_time">录入时间</string>
+    <string name="police_alert_region">报警区域</string>
+    <string name="police_alert_tollgate_type">卡口类型</string>
+    <string name="police_alert_tollgate">卡口选择</string>
+    <string name="police_alert_person">报警状态</string>
+    <string name="police_no_limit">不限</string>
+    <string name="police_deal">已处理</string>
+    <string name="police_no_deal">未处理</string>
+    <string name="search">查询</string>
+    <string name="alarm_detail">报警详情</string>
+
+    <string name="handle_status">处理状态</string>
+    <string name="handle_person">处理人员</string>
+    <string name="handler_time">处理时间</string>
+    <string name="disposition">布控</string>
+    <string name="disposition_status_yes">已布控</string>
+    <string name="disposition_status_no">已撤控</string>
+    <string name="disposition_date">布控日期</string>
+    <string name="disposition_time">报警时段</string>
+    <string name="disposition_reason">布控原因</string>
+    <string name="disposition_region">布控区域</string>
+    <string name="disposition_status">布控状态</string>
+    <string name="receivePerson">报警接收人</string>
+    <string name="message_send">短信发送</string>
+    <string name="message_send_yes">发送短信</string>
+    <string name="message_send_no">不发送短信</string>
+    <string name="disposition_person">布控人员</string>
+    <string name="disposition_type">布控方式</string>
+    <string name="disposition_plate">布控车牌</string>
+    <string name="disposition_cancel">撤控</string>
+    <string name="disposition_detail">布控详情</string>
+
+    <string name="disposition_cancel_person">撤控人员</string>
+    <string name="disposition_cancel_reason">撤控原因</string>
+    <string name="disposition_cancel_time">撤控时间</string>
+
+    <string name="choose_person">人员选择</string>
+
+</resources>
