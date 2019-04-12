@@ -27,32 +27,7 @@ android {
     }
 
 }
-buildscript {
-    repositories {
-        jcenter()
-        mavenCentral()
-        google()
-    }
-    dependencies {
-        classpath 'com.novoda:bintray-release:0.9'
-    }
-}
-allprojects {
-    repositories {
-        jcenter()
-        mavenCentral()
-        google()
-    }
 
-    tasks.withType(Javadoc) {
-        options {
-            encoding "UTF-8"
-            charSet 'UTF-8'
-            links "http://docs.oracle.com/javase/7/docs/api"
-
-        }
-    }
-}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -98,8 +73,8 @@ dependencies {
     api 'com.github.GrenderG:Toasty:1.4.2'
 
     //glide图片加载库
-    api 'com.github.bumptech.glide:glide:4.9.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    api 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
 
     //拍照相册选择 https://github.com/crazycodeboy/TakePhoto
     api 'org.devio.takephoto:takephoto_library:4.1.0'
