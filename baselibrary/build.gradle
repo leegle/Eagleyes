@@ -1,11 +1,7 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.yuhaoz'
 
 android {
     compileSdkVersion 28
-
-
 
     defaultConfig {
         minSdkVersion 19
@@ -13,39 +9,68 @@ android {
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     dataBinding {
         enabled true
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        abortOnError false
+    }
 
 }
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9'
+    }
+}
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        google()
+    }
 
+    tasks.withType(Javadoc) {
+        options {
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+
+        }
+    }
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha04'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
 
     //分包支持
-    api 'androidx.multidex:multidex:2.0.0'
+    api 'androidx.multidex:multidex:2.0.1'
 
     //liveData and ViewModel
-    api 'androidx.lifecycle:lifecycle-extensions:2.0.0'
-    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.0.0'
+    api 'androidx.lifecycle:lifecycle-extensions:2.1.0-alpha04'
+    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.1.0-alpha04'
 
     //Room数据库
-    api 'androidx.room:room-runtime:2.1.0-alpha02'
-    annotationProcessor 'androidx.room:room-compiler:2.1.0-alpha02'
+    api 'androidx.room:room-runtime:2.1.0-alpha06'
+    annotationProcessor 'androidx.room:room-compiler:2.1.0-alpha06'
 
     //内存泄露监控 https://github.com/square/leakcanary
 //    debugApi 'com.squareup.leakcanary:leakcanary-android:1.6.2'
@@ -58,28 +83,28 @@ dependencies {
     api 'com.squareup.okhttp3:logging-interceptor:3.12.0'
 
     //今日头条屏幕适配方案终极版 https://github.com/JessYanCoding/AndroidAutoSize
-    api 'me.jessyan:autosize:1.1.1'
+    api 'me.jessyan:autosize:1.1.2'
 
     //下拉刷新上拉加载 https://github.com/CymChad/BaseRecyclerViewAdapterHelper
-    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.44'
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.45-androidx'
 
     //多状态视图 https://github.com/qyxxjd/MultipleStatusView
-    api 'com.classic.common:multiple-status-view:1.5.1'
+    api 'com.classic.common:multiple-status-view:1.6'
 
     //权限申请  https://github.com/yanzhenjie/AndPermission
-    api 'com.yanzhenjie:permission:2.0.0-rc12'
+    api 'com.yanzhenjie.permission:x:2.0.1'
 
     //toast提醒 https://github.com/GrenderG/Toasty
-    api 'com.github.GrenderG:Toasty:1.3.1'
+    api 'com.github.GrenderG:Toasty:1.4.2'
 
     //glide图片加载库
-    api 'com.github.bumptech.glide:glide:4.8.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    api 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
     //拍照相册选择 https://github.com/crazycodeboy/TakePhoto
     api 'org.devio.takephoto:takephoto_library:4.1.0'
 
-    //查看大图缩放
+    //查看大图缩放https://github.com/chrisbanes/PhotoView
     api 'com.github.chrisbanes:PhotoView:2.3.0'
 
     //event bus
